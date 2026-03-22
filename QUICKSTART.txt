@@ -1,0 +1,105 @@
+QUICK START GUIDE
+Get running in 5 minutes
+
+BEFORE YOU START:
+- Python 3.10+ installed
+- At least 8GB RAM (16GB recommended for training)
+- NVIDIA GPU optional but recommended
+
+INSTALLATION (2 minutes):
+   
+   1. Navigate to project directory:
+      cd "c:\Users\Rafif Fikri\OneDrive\Documents\PROJECT SERIUS\PPE_Risk"
+   
+   2. Create virtual environment (optional but recommended):
+      python -m venv venv
+      venv\Scripts\activate
+   
+   3. Install dependencies:
+      pip install -r requirements.txt
+
+WORKFLOW (Quick Path):
+   
+   Option 1: Full Training (50-100 minutes)
+   
+   Run notebooks in order:
+   1. notebooks/01_eda_analysis.ipynb       (5 min)
+   2. notebooks/02_data_preprocessing.ipynb (10 min)
+   3. notebooks/03_model_training.ipynb     (30-60 min)
+   4. notebooks/04_inference_detection.ipynb (5 min)
+   
+   Then launch dashboard:
+   streamlit run app.py
+   
+   
+   Option 2: Quick Test (5 minutes)
+   
+   If model already trained:
+   python inference_demo.py
+   
+   Or launch dashboard directly (if best_model.pt exists):
+   streamlit run app.py
+
+RUNNING NOTEBOOKS:
+
+   Using Jupyter:
+   jupyter notebook
+   
+   Then navigate to notebooks/ folder and open desired notebook
+   
+   Or command line:
+   jupyter notebook notebooks/01_eda_analysis.ipynb
+
+COMMON COMMANDS:
+
+   Check GPU availability:
+   python -c "import torch; print('GPU:', torch.cuda.is_available())"
+   
+   Test model loading:
+   python inference_demo.py
+   
+   Launch dashboard:
+   streamlit run app.py
+   
+   Deactivate environment:
+   deactivate
+
+EXPECTED RESULTS:
+
+   After complete workflow you should have:
+   - Trained YOLOv8 model with mAP > 0.85
+   - Working detection system
+   - Interactive dashboard
+   - Compliance checking system
+
+TROUBLESHOOTING:
+
+   Model not found?
+   → Train using notebook 03 first
+   
+   Installation errors?
+   → pip install --upgrade pip
+   → Try: pip install -r requirements.txt --no-cache-dir
+   
+   GPU not detected?
+   → Normal, uses CPU instead (slower training)
+   
+   App crashes on startup?
+   → Check model exists at models/best_model.pt
+   → Verify all dependencies installed
+
+NEXT LEVEL:
+
+   - Modify compliance rules in src/compliance.py
+   - Add tracking system in src/tracking.py
+   - Deploy to cloud (Streamlit Cloud)
+   - Integrate with webcam for live detection
+   - Add database logging
+
+SUPPORT:
+
+   Full documentation: README.md
+   Setup details: SETUP_GUIDE.md
+   Notebook comments: See individual notebooks
+
+Good luck!
