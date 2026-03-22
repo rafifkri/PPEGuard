@@ -626,6 +626,6 @@ For questions, issues, or suggestions:
 
 **Built with Python | YOLOv8 | Streamlit**
 
-*Smart Safety, Powered by AI*
+*Smart Safety*
 
 </div>
